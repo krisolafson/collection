@@ -1,9 +1,9 @@
 <?php
 
 use Mundanity\Collection\MutableKeyedCollection;
+use PHPUnit\Framework\TestCase;
 
-
-class MutableKeyedCollectionTest extends PHPUnit_Framework_TestCase
+class MutableKeyedCollectionTest extends TestCase
 {
     public function testAdd()
     {

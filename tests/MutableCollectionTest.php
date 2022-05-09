@@ -1,9 +1,9 @@
 <?php
 
 use Mundanity\Collection\MutableCollection;
+use PHPUnit\Framework\TestCase;
 
-
-class MutableCollectionTest extends PHPUnit_Framework_TestCase
+class MutableCollectionTest extends TestCase
 {
     public function testAdd()
     {

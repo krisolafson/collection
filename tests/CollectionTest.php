@@ -2,9 +2,9 @@
 
 use Mundanity\Collection\Collection;
 use Mundanity\Collection\MutableCollection;
+use PHPUnit\Framework\TestCase;
 
-
-class CollectionTest extends PHPUnit_Framework_TestCase
+class CollectionTest extends TestCase
 {
     public function testFromCollection()
     {
@@ -99,7 +99,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase
     {
         $collection = new Collection(['item1']);
         $this->assertCount(1, $collection);
-        $this->assertInternalType('integer', $collection->count());
+        $this->assertIsInt($collection->count());
     }
 
 
@@ -151,7 +151,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase
             return $carry + $item;
         });
 
-        $this->assertInternalType('int', $reduced);
+        $this->assertIsInt($reduced);
         $this->assertEquals(15, $reduced);
     }
 
@@ -163,7 +163,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase
             return $carry - $item;
         }, 5);
 
-        $this->assertInternalType('int', $reduced);
+        $this->assertIsInt($reduced);
         $this->assertEquals(-1, $reduced);
 
         $collection = new Collection([]);
@@ -171,7 +171,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase
             return $carry + $item;
         }, 'foo');
 
-        $this->assertInternalType('string', $reduced);
+        $this->assertIsString($reduced);
         $this->assertEquals('foo', $reduced);
     }
 

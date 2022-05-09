@@ -1,9 +1,9 @@
 <?php
 
 use Mundanity\Collection\KeyedCollection;
+use PHPUnit\Framework\TestCase;
 
-
-class KeyedCollectionTest extends PHPUnit_Framework_TestCase
+class KeyedCollectionTest extends TestCase
 {
     public function testGetAtIndex()
     {

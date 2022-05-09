@@ -2,6 +2,7 @@
 
 namespace Mundanity\Collection;
 
+use Traversable;
 
 /**
  * Implements a basic collection from an array.
@@ -97,7 +98,7 @@ class Collection implements CollectionInterface
      * @return int
      *
      */
-    public function count()
+    public function count(): int
     {
         return count($this->data);
     }
@@ -106,10 +107,10 @@ class Collection implements CollectionInterface
     /**
      * Returns an iterator.
      *
-     * @return \Traversable
+     * @return Traversable
      *
      */
-    public function getIterator()
+    public function getIterator(): Traversable
     {
         return new \ArrayIterator($this->data);
     }
